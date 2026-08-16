@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Manutenção & Peças - Royal Enfield 350cc</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 320px;
+      max-height: 400px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 360px;
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #D97706;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1F2937;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen">
+
+  <header class="bg-slate-800 border-b border-amber-600/30 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🏍️</span>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold text-amber-500 tracking-wide">ROYAL ENFIELD 350cc</h1>
+          <p class="text-xs text-slate-400">Meteor 350 • Classic 350 • Hunter 350 (Plataforma J-Series)</p>
+        </div>
+      </div>
+      <nav class="flex flex-wrap gap-2 text-xs md:text-sm font-medium">
+        <a href="#lubrificantes" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-amber-600 text-slate-200 transition">Óleos</a>
+        <a href="#revisoes" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-amber-600 text-slate-200 transition">Cronograma</a>
+        <a href="#pecas" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-amber-600 text-slate-200 transition">Peças Paralelas</a>
+        <a href="#valvulas" class="px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-amber-600 text-slate-200 transition">Regulagem Válvulas</a>
+        <a href="#calculadora" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold transition">Calculadora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <section class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl">
+      <div class="max-w-3xl mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 mb-2">Visão Geral Técnico-Operacional</h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Este painel interativo foi desenvolvido para proprietários de motocicletas Royal Enfield 350cc que optam por realizar a manutenção preventiva em oficinas independentes ou na própria garagem. Ele reúne dados técnicos de lubrificação, equivalência de componentes no mercado paralelo e instruções passo a passo para garantir alta performance e confiabilidade sem depender das concessionárias.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-4 text-center">
+          <span class="text-2xl mb-1 block">🛢️</span>
+          <p class="text-xs text-slate-400 uppercase font-semibold">Volume de Óleo</p>
+          <p class="text-xl md:text-2xl font-black text-amber-400 mt-1">1,7 Litro</p>
+          <p class="text-[10px] text-slate-500">(Com troca de filtro / Cárter 2,2L)</p>
+        </div>
+        <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-4 text-center">
+          <span class="text-2xl mb-1 block">⚙️</span>
+          <p class="text-xs text-slate-400 uppercase font-semibold">Folga de Válvulas</p>
+          <p class="text-xl md:text-2xl font-black text-amber-400 mt-1">0,08 / 0,18 mm</p>
+          <p class="text-[10px] text-slate-500">Admissão (0.08) / Escape (0.18)</p>
+        </div>
+        <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-4 text-center">
+          <span class="text-2xl mb-1 block">⏱️</span>
+          <p class="text-xs text-slate-400 uppercase font-semibold">Troca Ideal Óleo</p>
+          <p class="text-xl md:text-2xl font-black text-amber-400 mt-1">5.000 km</p>
+          <p class="text-[10px] text-slate-500">(Ou 3.000 km em uso severo)</p>
+        </div>
+        <div class="bg-slate-900/90 border border-amber-500/20 rounded-xl p-4 text-center">
+          <span class="text-2xl mb-1 block">🛡️</span>
+          <p class="text-xs text-slate-400 uppercase font-semibold">Padrão do Óleo</p>
+          <p class="text-xl md:text-2xl font-black text-amber-400 mt-1">15W-50</p>
+          <p class="text-[10px] text-slate-500">JASO MA2 / API SL ou SP</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lubrificantes" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl scroll-mt-20">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+          <span>🛢️</span> Análise Crítica do Óleo do Motor
+        </h2>
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+          Motores refrigerados a ar e óleo trabalham em regimes térmicos mais elevados que motores refrigerados a líquido. O óleo original da rede (Petronas Sprinta F500) atende às normas mínimas, mas sofre cisalhamento rápido no trânsito urbano pesado. A migração para lubrificantes semissintéticos com base de Éster (como o **Motul 5100**) ou 100% sintéticos garante marchas mais macias, redução de ruído e maior proteção térmica.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-lg font-semibold text-slate-200 mb-4 text-center">Comparativo de Desempenho Térmico vs Preço Médio</h3>
+          <div class="chart-container">
+            <canvas id="oilComparisonChart"></canvas>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900/80 border-l-4 border-amber-500 p-4 rounded-r-xl">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-amber-400 text-base">Motul 5100 15W-50 Technosynthese</h4>
+              <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full">RECOMENDADO</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              <strong>Preço Médio:</strong> R$ 65 - R$ 85 / Litro<br>
+              <strong>Por que escolher:</strong> Possui tecnologia de Éster, excelente resistência ao cisalhamento e atende à norma JASO MA2/API SP. Melhora sensivelmente os engates de marcha e mantém a viscosidade estável no calor tropical.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/80 border-l-4 border-emerald-500 p-4 rounded-r-xl">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-emerald-400 text-base">Motul 7100 15W-50 (100% Sintético)</h4>
+              <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2.5 py-1 rounded-full">ALTA PERFORMANCE</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              <strong>Preço Médio:</strong> R$ 100 - R$ 130 / Litro<br>
+              <strong>Por que escolher:</strong> Formulado com base 100% sintética de Éster. Ideal para viagens longas sob alta velocidade contínua e temperaturas extremas.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/80 border-l-4 border-slate-600 p-4 rounded-r-xl">
+            <div class="flex justify-between items-start">
+              <h4 class="font-bold text-slate-300 text-base">Petronas Sprinta F500 (Homologado OEM)</h4>
+              <span class="bg-slate-700 text-slate-300 text-xs font-bold px-2.5 py-1 rounded-full">PADRÃO FABRICA</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              <strong>Preço Médio:</strong> R$ 40 - R$ 55 / Litro<br>
+              <strong>Nota:</strong> Atende aos requisitos do manual, mas tende a degradar mais rápido em tráfego de para-e-anda urbano.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="revisoes" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl scroll-mt-20">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+          <span>📅</span> Plano & Intervalos de Manutenção Preventiva
+        </h2>
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+          Embora o manual especifique trocas a cada 10.000 km, mecânicos especialistas recomendam reduzir esse intervalo para proteger o motor monocilíndrico de 349cc. Veja o comparativo de quilometragem por perfil de uso e o cronograma completo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        <div class="lg:col-span-1 bg-slate-900/60 p-4 rounded-xl border border-slate-700 flex flex-col justify-center">
+          <h3 class="text-base font-semibold text-slate-200 mb-2 text-center">Intervalo de Troca por Perfil (km)</h3>
+          <div class="chart-container" style="height: 250px;">
+            <canvas id="intervalChart"></canvas>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-4 flex flex-col justify-between">
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-700 flex gap-4 items-start">
+            <div class="bg-amber-500 text-slate-950 font-black rounded-lg p-3 text-center min-w-[70px]">
+              <span class="text-xs block uppercase">Revisão</span>
+              <span class="text-xl">1k</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-amber-400 text-sm">1.000 km (Primeira Revisão - Amaciamento)</h4>
+              <p class="text-xs text-slate-300 mt-1">
+                Troca obrigatória do óleo e filtro para remover partículas de amaciamento. Limpeza do plugue magnético do dreno. Regulagem fria de válvulas (0.08mm/0.18mm) e verificação de reaperto de eixos e chassi.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-700 flex gap-4 items-start">
+            <div class="bg-amber-500/80 text-slate-950 font-black rounded-lg p-3 text-center min-w-[70px]">
+              <span class="text-xs block uppercase">Revisão</span>
+              <span class="text-xl">5k</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-amber-400 text-sm">5.000 km (Intermediária Recomendada)</h4>
+              <p class="text-xs text-slate-300 mt-1">
+                Substituição do óleo (Motul 5100) e filtro de óleo. Inspeção de desgaste das pastilhas de freio, ajuste da folga da corrente de transmissão (25-30 mm) e verificação de ruído nas válvulas.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-700 flex gap-4 items-start">
+            <div class="bg-amber-600 text-slate-950 font-black rounded-lg p-3 text-center min-w-[70px]">
+              <span class="text-xs block uppercase">Revisão</span>
+              <span class="text-xl">10k</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-amber-400 text-sm">10.000 km (Revisão Geral)</h4>
+              <p class="text-xs text-slate-300 mt-1">
+                Troca de óleo, filtro de óleo, filtro de ar e vela de ignição (conversão para NGK Iridium). Troca do fluido de freio (DOT 4). Ajuste completo de válvulas, verificação da caixa de direção e rolamentos de roda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pecas" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl scroll-mt-20">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+          <span>🔧</span> Peças Alternativas (Aftermarket) vs Originais (OEM)
+        </h2>
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+          A plataforma J-350 compartilha a maioria dos consumíveis entre os modelos Meteor, Classic e Hunter. Abaixo você encontra as melhores opções do mercado paralelo, que frequentemente superam a qualidade das peças originais com custo reduzido.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg font-semibold text-slate-200 mb-4 text-center">Comparativo de Custos Médios (R$)</h3>
+          <div class="chart-container">
+            <canvas id="partsPriceChart"></canvas>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-900/90 text-amber-400 uppercase font-semibold text-[11px] border-b border-slate-700">
+              <tr>
+                <th class="p-2.5">Componente</th>
+                <th class="p-2.5">Marca Recomendada</th>
+                <th class="p-2.5">Código / Referência</th>
+                <th class="p-2.5">Preço Médio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-700/50 bg-slate-900/40">
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Filtro de Óleo</td>
+                <td class="p-2.5">Valflex / Wega / Hiflo</td>
+                <td class="p-2.5 font-mono text-amber-300">Valflex 1570120/B / WO-350</td>
+                <td class="p-2.5">R$ 30 - R$ 65</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">O-Ring da Tampa do Filtro</td>
+                <td class="p-2.5">Vedamotors / Valflex</td>
+                <td class="p-2.5 font-mono text-amber-300">Anel Vedação RE 350</td>
+                <td class="p-2.5">R$ 15 - R$ 25</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Vela de Ignição Standard</td>
+                <td class="p-2.5">NGK / Bosch</td>
+                <td class="p-2.5 font-mono text-amber-300">NGK LKAR8A-9</td>
+                <td class="p-2.5">R$ 40 - R$ 55</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Vela de Ignição Iridium</td>
+                <td class="p-2.5">NGK Laser Iridium</td>
+                <td class="p-2.5 font-mono text-amber-300">NGK Iridium compatível</td>
+                <td class="p-2.5">R$ 90 - R$ 130</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Pastilha Dianteira</td>
+                <td class="p-2.5">Cobreq Cerâmica / Brenta</td>
+                <td class="p-2.5 font-mono text-amber-300">Cobreq N-993C</td>
+                <td class="p-2.5">R$ 65 - R$ 175</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Pastilha Traseira</td>
+                <td class="p-2.5">Cobreq Cerâmica / Brenta</td>
+                <td class="p-2.5 font-mono text-amber-300">Cobreq N-932C</td>
+                <td class="p-2.5">R$ 65 - R$ 165</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Kit Coroa (42T) e Pinhão (15T)</td>
+                <td class="p-2.5">Durag Aço 1045/8620</td>
+                <td class="p-2.5 font-mono text-amber-300">Durag RE 350 CNC</td>
+                <td class="p-2.5">R$ 180 - R$ 280</td>
+              </tr>
+              <tr class="hover:bg-slate-700/30">
+                <td class="p-2.5 font-bold text-slate-200">Corrente Selada com Retentor</td>
+                <td class="p-2.5">D.I.D / KMC / RK</td>
+                <td class="p-2.5 font-mono text-amber-300">D.I.D 520V (104 elos)</td>
+                <td class="p-2.5">R$ 250 - R$ 420</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="valvulas" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl scroll-mt-20">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+          <span>⚙️</span> Passo a Passo: Regulagem da Folga de Válvulas
+        </h2>
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+          O motor J-350 utiliza balancins roletados com regulagem mecânica por parafuso e contraporca (sem tuchos hidráulicos). A checagem periódica das folgas é vital para evitar perda de compressão, superaquecimento e ruídos excessivos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-900/90 border border-amber-500/30 p-4 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-amber-500 text-slate-950 font-bold text-xs px-2.5 py-1 rounded-full">PASSO 1</span>
+              <span class="text-2xl">🧊</span>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm mb-1">Resfriamento do Motor</h3>
+            <p class="text-xs text-slate-400">
+              O procedimento deve ser feito obrigatoriamente com o **motor totalmente frio** (temperatura ambiente abaixo de 30°C), preferencialmente parado após uma noite.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/90 border border-amber-500/30 p-4 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-amber-500 text-slate-950 font-bold text-xs px-2.5 py-1 rounded-full">PASSO 2</span>
+              <span class="text-2xl">🎯</span>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm mb-1">Ponto Morto Superior (PMS)</h3>
+            <p class="text-xs text-slate-400">
+              Remova o assento, tanque e tampa do cabeçote. Gire o virabrequim pelo magneto até alinhar as marcas de sincronismo no PMS da fase de compressão.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/90 border border-amber-500/30 p-4 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-amber-500 text-slate-950 font-bold text-xs px-2.5 py-1 rounded-full">PASSO 3</span>
+              <span class="text-2xl">📏</span>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm mb-1">Medição com Calibre</h3>
+            <p class="text-xs text-slate-400">
+              Insira a lâmina de calibração entre o parafuso regulador e a haste:<br>
+              • <strong>Admissão:</strong> 0,08 mm<br>
+              • <strong>Escape:</strong> 0,18 mm<br>
+              A lâmina deve deslizar com leve arrasto.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/90 border border-amber-500/30 p-4 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="bg-amber-500 text-slate-950 font-bold text-xs px-2.5 py-1 rounded-full">PASSO 4</span>
+              <span class="text-2xl">🔑</span>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm mb-1">Ajuste e Trava</h3>
+            <p class="text-xs text-slate-400">
+              Solte a contraporca, ajuste a posição do parafuso regulador e reaperte a contraporca segurando o parafuso. Meça novamente após o aperto final para garantir que o parafuso não girou.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculadora" class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-xl scroll-mt-20">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+          <span>🧮</span> Calculadora Interativa de Custos de Revisão
+        </h2>
+        <p class="text-slate-300 text-sm mt-2 leading-relaxed">
+          Simule o custo estimado de uma revisão feita por você ou em oficina independente utilizando peças paralelas de alta performance.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/90 p-6 rounded-xl border border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Escolha o Óleo (2 Litros)</label>
+            <select id="calcOil" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2.5 text-sm text-slate-200 focus:border-amber-500 focus:outline-none" onchange="calculateCost()">
+              <option value="150">Motul 5100 15W-50 (2L ~ R$ 150)</option>
+              <option value="220">Motul 7100 15W-50 (2L ~ R$ 220)</option>
+              <option value="95">Petronas Sprinta F500 (2L ~ R$ 95)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Filtro de Óleo + Vedação O-Ring</label>
+            <select id="calcFilter" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2.5 text-sm text-slate-200 focus:border-amber-500 focus:outline-none" onchange="calculateCost()">
+              <option value="60">Filtro Paralelo Valflex/Wega + O-ring (R$ 60)</option>
+              <option value="90">Filtro Original Concessionária (R$ 90)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Itens Adicionais de Revisão Geral</label>
+            <div class="space-y-2 text-xs text-slate-300 mt-2">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calcSpark" value="110" onchange="calculateCost()" class="rounded bg-slate-800 border-slate-600 text-amber-500 focus:ring-0">
+                <span>Vela Iridium NGK (R$ 110)</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="calcBrakes" value="200" onchange="calculateCost()" class="rounded bg-slate-800 border-slate-600 text-amber-500 focus:ring-0">
+                <span>Jogo Pastilhas Diant + Tras Cerâmica (R$ 200)</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Mão de Obra de Oficina Independente</label>
+            <input type="number" id="calcLabor" value="150" min="0" step="10" oninput="calculateCost()" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2 text-sm text-slate-200 focus:border-amber-500 focus:outline-none">
+          </div>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-xl border border-amber-500/30 text-center flex flex-col justify-center items-center h-full">
+          <p class="text-xs text-slate-400 uppercase font-semibold">Custo Total Estimado da Revisão</p>
+          <p id="calcTotal" class="text-4xl md:text-5xl font-black text-amber-400 my-4">R$ 360,00</p>
+          <p class="text-xs text-slate-400 max-w-xs">
+            Valor aproximado para uma revisão independente completa utilizando insumos de primeira linha.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>Guia Técnico Independente de Manutenção - Royal Enfield 350cc (Plataforma J-Series)</p>
+      <p class="mt-1">Desenvolvido para auxílio de proprietários e oficinas mecânicas especializadas.</p>
+    </div>
+  </footer>
+
+  <script>
+    function wrapLabel(str, maxLen = 16) {
+      if (typeof str !== 'string') return str;
+      if (str.length <= maxLen) return str;
+      const words = str.split(' ');
+      const lines = [];
+      let currentLine = '';
+      words.forEach(word => {
+        if ((currentLine + ' ' + word).trim().length > maxLen) {
+          if (currentLine) lines.push(currentLine.trim());
+          currentLine = word;
+        } else {
+          currentLine += (currentLine ? ' ' : '') + word;
+        }
+      });
+      if (currentLine) lines.push(currentLine.trim());
+      return lines;
+    }
+
+    const defaultTooltipConfig = {
+      callbacks: {
+        title: function(tooltipItems) {
+          const item = tooltipItems[0];
+          let label = item.chart.data.labels[item.dataIndex];
+          if (Array.isArray(label)) {
+            return label.join(' ');
+          } else {
+            return label;
+          }
+        }
+      }
+    };
+
+    const ctxOil = document.getElementById('oilComparisonChart').getContext('2d');
+    const oilLabelsRaw = [
+      'Petronas Sprinta F500 15W50',
+      'Motul 5100 Technosynthese',
+      'Motul 7100 100% Sintético',
+      'Castrol Power1 Ultimate 15W50'
+    ];
+    const oilLabels = oilLabelsRaw.map(l => wrapLabel(l, 16));
+
+    new Chart(ctxOil, {
+      type: 'bar',
+      data: {
+        labels: oilLabels,
+        datasets: [
+          {
+            label: 'Estabilidade Térmica (Nota 1-10)',
+            data: [6, 9, 10, 8.5],
+            backgroundColor: '#F59E0B',
+            borderRadius: 6
+          },
+          {
+            label: 'Preço Médio /L (R$)',
+            data: [47.5, 75, 115, 85],
+            backgroundColor: '#3B82F6',
+            borderRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          },
+          y: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#E5E7EB', font: { size: 11 } }
+          },
+          tooltip: defaultTooltipConfig
+        }
+      }
+    });
+
+    const ctxInterval = document.getElementById('intervalChart').getContext('2d');
+    const intervalLabelsRaw = [
+      'Uso Severo (Trânsito)',
+      'Uso Misto (Recomendado)',
+      'Manual RE (Ideal)'
+    ];
+    const intervalLabels = intervalLabelsRaw.map(l => wrapLabel(l, 16));
+
+    new Chart(ctxInterval, {
+      type: 'bar',
+      data: {
+        labels: intervalLabels,
+        datasets: [{
+          label: 'Quilometragem por Troca (km)',
+          data: [3500, 5000, 10000],
+          backgroundColor: ['#EF4444', '#F59E0B', '#10B981'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        scales: {
+          x: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          },
+          y: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: defaultTooltipConfig
+        }
+      }
+    });
+
+    const ctxParts = document.getElementById('partsPriceChart').getContext('2d');
+    const partsLabelsRaw = [
+      'Filtro Óleo + Vedação',
+      'Vela Ignição Standard',
+      'Vela Ignição Iridium',
+      'Pastilhas Dianteiras',
+      'Kit Transmissão Completo'
+    ];
+    const partsLabels = partsLabelsRaw.map(l => wrapLabel(l, 16));
+
+    new Chart(ctxParts, {
+      type: 'bar',
+      data: {
+        labels: partsLabels,
+        datasets: [
+          {
+            label: 'Peças Originais OEM (R$)',
+            data: [90, 50, 130, 175, 700],
+            backgroundColor: '#6B7280',
+            borderRadius: 6
+          },
+          {
+            label: 'Marcas Paralelas (R$)',
+            data: [47.5, 47.5, 110, 120, 510],
+            backgroundColor: '#F59E0B',
+            borderRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          },
+          y: {
+            ticks: { color: '#9CA3AF', font: { size: 10 } },
+            grid: { color: '#374151' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#E5E7EB', font: { size: 11 } }
+          },
+          tooltip: defaultTooltipConfig
+        }
+      }
+    });
+
+    function calculateCost() {
+      const oil = parseFloat(document.getElementById('calcOil').value) || 0;
+      const filter = parseFloat(document.getElementById('calcFilter').value) || 0;
+      const labor = parseFloat(document.getElementById('calcLabor').value) || 0;
+      const spark = document.getElementById('calcSpark').checked ? parseFloat(document.getElementById('calcSpark').value) : 0;
+      const brakes = document.getElementById('calcBrakes').checked ? parseFloat(document.getElementById('calcBrakes').value) : 0;
+
+      const total = oil + filter + labor + spark + brakes;
+      document.getElementById('calcTotal').innerText = 'R$ ' + total.toFixed(2).replace('.', ',');
+    }
+  </script>
+</body>
+</html>
